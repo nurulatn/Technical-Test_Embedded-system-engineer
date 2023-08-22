@@ -186,8 +186,7 @@ void loop() {
 
   String payload;
   serializeJson(jsonDoc, payload);
-
-  String payload = "{\"status\": \"OK\",\"deviceID\": \"ramadhani-nurul-atina\",\"data\": {\"v\": \"221\",\"i\": \"2.3\",\"pa\": \"508.3\",\"temp\": \"27.4\",\"fan\": \"OFF\"}}";
+  
   client.publish(mqtt_topic, payload.c_str());
 
   LoopingTime = waktuSekarang;
